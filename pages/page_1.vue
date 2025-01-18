@@ -86,7 +86,7 @@
               </div>
 
               <div class="border-t border-gray-200">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" @click.prevent="router.push('/account?section=orders')">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>

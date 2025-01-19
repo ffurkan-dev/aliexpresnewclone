@@ -58,7 +58,7 @@
       </div>
       <div v-else>
         <h1 class="text-2xl font-bold mb-4">{{ selectedSection }}</h1>
-        <!-- Diğer sekmelerin içeriği buraya gelecek -->
+        
       </div>
     </div>
   </div>
@@ -73,12 +73,12 @@ const route = useRoute()
 const selectedSection = ref('Genel Bakış')
 const orders = ref([])
 const user = ref({
-  name: 'John Doe', // Bu kısım gerçek kullanıcı verisiyle değiştirilmeli
+  name: 'John Doe', 
   avatar: '/images/no-photo.png'
 })
 
 onMounted(() => {
-  // URL'de section parametresi varsa onu kullan
+  
   if (route.query.section === 'orders') {
     selectedSection.value = 'Siparişlerim'
   }

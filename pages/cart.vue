@@ -4,16 +4,16 @@
       <h1 class="text-2xl font-bold mb-8">Alışveriş Sepeti ({{ cartStore.totalItems }})</h1>
       
       <div class="flex gap-8">
-        <!-- Cart Items -->
+        
         <div class="flex-1 bg-white rounded-lg shadow p-6">
-          <!-- Select All -->
+      
           <div class="flex items-center mb-6 pb-6 border-b">
             <input type="checkbox" class="mr-2" />
             <span class="text-sm">Tüm ürünleri seç</span>
             <button class="text-sm text-gray-500 ml-4">Seçili ürünleri sil</button>
           </div>
 
-          <!-- Cart Items List -->
+         
           <div v-if="cartStore.items.length > 0">
             <div v-for="item in cartStore.items" :key="item.id" class="flex gap-4 py-4 border-b">
               <input 
@@ -67,7 +67,7 @@
           </div>
         </div>
 
-        <!-- Order Summary -->
+        
         <div class="w-80">
           <div class="bg-white rounded-lg shadow p-6 sticky top-8">
             <h2 class="text-lg font-semibold mb-4">Sipariş Özeti</h2>
@@ -110,7 +110,6 @@ const cartStore = useCartStore()
 const userStore = useUserStore()
 const router = useRouter()
 
-// Kullanıcı giriş yapmamışsa login sayfasına yönlendir
 onMounted(() => {
   if (!userStore.isLoggedIn) {
     router.push('/')

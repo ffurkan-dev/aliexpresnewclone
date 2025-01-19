@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- Top Navbar -->
+    
     <div class="bg-white shadow-sm">
-      <!-- Upper Navbar -->
+      
       <div class="container mx-auto px-4 py-2 flex items-center justify-between">
         <div class="flex items-center space-x-4 flex-1">
           <img src="/aliexpress-logo.jpg" alt="AliExpress" class="h-8" />
@@ -58,7 +58,7 @@
               </button>
             </div>
             
-            <!-- Dropdown Menu -->
+            
             <div 
               class="absolute hidden group-hover:block right-0 top-full mt-1 w-48 bg-white border rounded-md shadow-lg py-1 z-50"
             >
@@ -153,7 +153,7 @@
         </div>
       </div>
 
-      <!-- Lower Navbar -->
+      
       <div class="container mx-auto px-4 py-2">
         <div class="flex items-center space-x-8">
           <div class="relative group">
@@ -166,7 +166,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-            <!-- Dropdown Menu -->
+            
             <div class="absolute hidden group-hover:block w-64 bg-white border shadow-lg mt-2 py-2 z-50">
               <a href="#" class="block px-4 py-2 hover:bg-gray-100">Elektronik</a>
               <a href="#" class="block px-4 py-2 hover:bg-gray-100">Giyim</a>
@@ -192,7 +192,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <!-- Dropdown Menu -->
+              
               <div class="absolute hidden group-hover:block w-48 bg-white border shadow-lg mt-2 py-2 right-0 z-50">
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100">Kadın Giyim</a>
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100">Ayakkabı</a>
@@ -205,7 +205,7 @@
       </div>
     </div>
 
-    <!-- Product Categories -->
+    
     <div class="bg-gray-100 py-8">
       <div class="max-w-7xl mx-auto px-4">
         <h1 class="text-2xl font-bold text-center mb-8">Günün teklifleri</h1>
@@ -220,7 +220,7 @@
       </div>
     </div>
 
-    <!-- Recommended Products -->
+    
     <div class="bg-gray-100 py-8">
       <div class="max-w-7xl mx-auto px-4">
         <h1 class="text-2xl font-bold text-center mb-8">Beğenebileceğiniz Diğer Ürünler</h1>
@@ -234,7 +234,7 @@
                 :alt="product.title" 
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <!-- Shopping Cart Icon -->
+              
               <div class="absolute top-2 right-2 bg-white rounded-full p-2 shadow-md cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
@@ -243,14 +243,14 @@
             </div>
             <h3 class="text-sm text-gray-700 line-clamp-2 mb-2">{{ product.title }}</h3>
             
-            <!-- Price Section -->
+            
             <div class="flex items-baseline space-x-2">
               <span class="text-lg font-bold">€{{ product.price.toFixed(2) }}</span>
               <span class="text-sm text-gray-500 line-through">€{{ product.oldPrice.toFixed(2) }}</span>
               <span v-if="product.discount" class="text-red-500 text-sm">-{{ product.discount }}%</span>
             </div>
 
-            <!-- Rating and Sold Count -->
+            
             <div class="mt-2 flex items-center space-x-2">
               <div class="flex items-center text-yellow-400">
                 <span class="text-sm">★ {{ product.rating }}</span>
@@ -258,13 +258,13 @@
               <span class="text-sm text-gray-500">{{ product.soldCount }}</span>
             </div>
 
-            <!-- Free Shipping and Choice Tags -->
+            
             <div class="mt-2 flex flex-wrap gap-2">
               <span v-if="product.freeShipping" class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">Ücretsiz sevkiyat</span>
               <span v-if="product.choice" class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Choice</span>
             </div>
 
-            <!-- Action Buttons (Visible on Hover) -->
+            
             <div class="mt-3 grid grid-cols-2 gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <button class="w-full bg-black text-white px-3 py-1.5 rounded-sm text-xs font-medium hover:bg-gray-800 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
@@ -285,7 +285,7 @@
       </div>
     </div>
 
-    <!-- Remove fixed bottom buttons -->
+    
   </div>
   <Footer />
   <LoginModal :is-open="showLoginModal" @close="showLoginModal = false" />
@@ -317,7 +317,7 @@ const handleLogout = () => {
   showUserMenu.value = false
 }
 
-// Sayfa dışına tıklandığında menüyü kapat
+
 onMounted(() => {
   document.addEventListener('click', (e) => {
     if (showUserMenu.value && !(e.target as Element).closest('.relative')) {

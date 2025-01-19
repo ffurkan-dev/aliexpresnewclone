@@ -22,9 +22,9 @@
       </div>
     </div>
 
-    <!-- Products Carousel -->
+    
     <div class="relative">
-      <!-- Previous Button -->
+      
       <button 
         @click="prevSlide"
         class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-lg z-10 hover:bg-gray-100"
@@ -36,7 +36,7 @@
         </svg>
       </button>
 
-      <!-- Products -->
+      
       <div class="overflow-hidden">
         <div 
           class="flex transition-transform duration-300 ease-in-out"
@@ -58,14 +58,14 @@
               </div>
               <h3 class="text-sm text-gray-700 line-clamp-2 mb-2">{{ product.title }}</h3>
               
-              <!-- Price Section -->
+              
               <div class="flex items-baseline space-x-2">
                 <span class="text-lg font-bold">€{{ product.price.toFixed(2) }}</span>
                 <span class="text-sm text-gray-500 line-through">€{{ product.oldPrice.toFixed(2) }}</span>
                 <span v-if="product.discount" class="text-red-500 text-sm">-{{ product.discount }}%</span>
               </div>
 
-              <!-- Rating or Save Amount -->
+              
               <div v-if="product.rating" class="mt-2 flex items-center space-x-2">
                 <div class="flex items-center text-yellow-400">
                   <span class="text-sm">★ {{ product.rating }}</span>
@@ -80,7 +80,7 @@
         </div>
       </div>
 
-      <!-- Next Button -->
+      
       <button 
         @click="nextSlide"
         class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-lg z-10 hover:bg-gray-100"
@@ -153,7 +153,7 @@ const startAutoSlide = () => {
 }
 
 onMounted(() => {
-  // Start countdown timer if timeLeft exists
+  
   if (props.category.timeLeft) {
     const [hours, minutes, seconds] = props.category.timeLeft.split(':').map(Number)
     timeLeft.value = hours * 3600 + minutes * 60 + seconds
